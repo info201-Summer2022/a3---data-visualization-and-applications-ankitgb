@@ -1,1 +1,33 @@
+##Introduction
+
+Incarceration trends have been a very prevalent topic throughout the world recently because of the variety of factors that are recorded along with incarceration rates. Within assignment A3, I am going to be analyzing the incarceration trends between a multitude of variables including the total population of people in Jail that changes between 2000 to 2018. Another variable relationship would be how the incarceration rates of people changed with gender. The last relationship I analyzed was the incarceration rate based on the county they were in. Since there is often too much data to use efficiently, I focused some parts of my analysis on Alabama state in the year 2018 because it is the most recent recording. The data used for my analysis came from the Vera Institute and can be explored/downloaded from https://github.com/vera-institute/incarceration-trends#documentation.
+
+##Summary Information
+
+Due to the fact that this dataset from the Vera Institute has a large amount of recordings, I will focus on a specific county in Alabama known as Baldwin County in order to complete my analysis. This summary information table will include several calculated features such as the average number of men and women within Baldwin County aged 15-65. Another calculated feature would be the times in which there is a maximum and minimum number of people in Baldwin County.If I zoom out a small amount and look at the bigger picture, I can test the relationship between the number of people incarcerated within all the different counties in Alabama along with the total incarcerated population in 2000 vs. 2018.
+
+summary_info <- list()
+summary_info$max_population_year_Baldwin <- max_population_year_Baldwin
+summary_info$min_population_year_Baldwin <- min_population_year_Baldwin
+summary_info$mean_male <- mean_male
+summary_info$mean_female <- mean_female
+summary_info$max_population_county_2000 <- max_population_county_2000
+summary_info$max_population_county_2018 <- max_population_county_2018
+summary_info$max_jail_pop_county_2000 <- max_jail_pop_county_2000
+summary_info$max_jail_pop_county_2018 <- max_jail_pop_county_2018
+
+##Chart 1
+# I included this chart to show the differences in the incarceration rates in different counties within Alabama. As you can see, Baldwin County is an extreme outlier that contains the largest number of total jail population out of all the other 5 counties. There is a general pattern of upward increase of incarceration rates from 1970 all the way until 2018, yet this is all based on which county of Alabama you are in. There are many other counties that have not been depicted in this chart.
+
+print(plot1)
+
+## Chart 2
+# I included this chart to illustrate the differences between the total living population within Baldwin County, Alabama and the total incarcerated population living within Baldwin County. From the two y-axes interacting over the x-axis of year, many patterns emerge such as how the population of jailed and unjailed individuals are constantly rising in relation with time. As the years go on, more and more people are being born and more people are consistently making bad choices.
+
+print(plot2)
+
+##chart 3
+# This chart that I have a created is a map of the U.S.A. I have zoomed out further than just the scope of Baldwin County and Alabama in general to analyze the larger trends apparent within the incarceration data from Vera Institute. The darker red areas contain high populations of incarcerated individuals while the black areas have little to no incarceration occuring in the area. One significant pattern was that southern california had really high rates of incarceration during 2000.
+
+print(plot3)
 
