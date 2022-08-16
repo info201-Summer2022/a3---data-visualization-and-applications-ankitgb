@@ -32,7 +32,7 @@ print(summary_info)
 
 #1) The maximum population of Baldwin County from 1970 to 2018 and the year that this maximum total population took place.
 
-Alabama_Baldwin_Data <- filter(Alabama_data, county_name == "Baldwin County")Alabama_data, county_name == "Baldwin County")
+Alabama_Baldwin_Data <- filter(Alabama_data, county_name == "Baldwin County")
 max_population <- max(Alabama_Baldwin_Data$total_pop)
 max_population_data_year <- filter(Alabama_Baldwin_Data, Alabama_Baldwin_Data$total_pop == max_population)
 max_population_year_Baldwin <- select(max_population_data_year, year, total_pop)
@@ -84,14 +84,12 @@ print(plot1)
 
 #Plot 2
 
-plot2_data <- select(Alabama_Baldwin_Data, year, total_pop, total_jail_pop)
-plot2 <- ggplot(plot2_data, aes(x=year)) +
-        geom_bar(aes(y="total_pop"),stat = "identity") +
-        geom_bar(aes(y="total_jail_pop"))
-  scale_y_continuous(
-    "Total Population" , 
-    sec.axis = sec_axis(~ , * 1.2, name = "Total Jailed Population")) +
-  ggtitle("Relationship between the total population of Baldwin County + total incarcerated population of Baldwin County over 1970-2018")
+plot2v <- ggplot(Alabama_Baldwin_Data,
+                mapping = aes(x = year, y = total_jail_pop)) +
+  ggtitle("Total Population of Baldwin County vs. total incarcerated population over 1970-2018")
+
+plot2 <- plot2v +
+  geom_line()
 print(plot2)
 
 #Plot 3 (Map)

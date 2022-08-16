@@ -7,7 +7,8 @@ fontsize: 12pt
 --- 
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+
+source("Analysis.R")
 
 library("knitr")
 library("usmap")
@@ -15,7 +16,6 @@ library("ggplot2")
 library(dplyr)
 library(reshape2)
 
-source
 ``` 
 
 Introduction:
@@ -24,17 +24,8 @@ Incarceration trends have been a very prevalent topic throughout the world recen
 
 Summary Information:
 
-Due to the fact that this dataset from the Vera Institute has a large amount of recordings, I will focus on a specific county in Alabama known as Baldwin County in order to complete my analysis. This summary information table will include several calculated features such as the average number of men and women within Baldwin County aged 15-65. Another calculated feature would be the times in which there is a maximum and minimum number of people in Baldwin County.If I zoom out a small amount and look at the bigger picture, I can test the relationship between the number of people incarcerated within all the different counties in Alabama along with the total incarcerated population in 2000 vs. 2018.
+Due to the fact that this dataset from the Vera Institute has a large amount of recordings, I will focus on a specific county in Alabama known as Baldwin County in order to complete my analysis. This summary information table will include several calculated features such as the average number of men and women within Baldwin County aged 15-65. Another calculated feature would be the times in which there is a maximum and minimum number of people in Baldwin County.If I zoom out a small amount and look at the bigger picture, I can test the relationship between the number of people incarcerated within all the different counties in Alabama along with the total incarcerated population in 2000 vs. 2018. The summary values that I calculated are as follows. The maximum population was in 2018 within Baldwin County, Alabama and was 218022 people, The minimum population was in 1970 within Baldwin County and was 59531 people. The mean number of males were 38800.37 and the mean number of females was 40507.49. The county with the maximum population in 2000 was Jefferson County, AL and contained 662033 people. The county with the maximum population in 2018 was also Jefferson County, AL with 659300 people. The total jailed population in 2000 was 1622.76 in Jefferson county. The total jailed populated only increased to 1639 people after 18 years in 2018 within Jefferson County, Al as well.
 
-summary_info <- list()
-summary_info$max_population_year_Baldwin <- max_population_year_Baldwin
-summary_info$min_population_year_Baldwin <- min_population_year_Baldwin
-summary_info$mean_male <- mean_male
-summary_info$mean_female <- mean_female
-summary_info$max_population_county_2000 <- max_population_county_2000
-summary_info$max_population_county_2018 <- max_population_county_2018
-summary_info$max_jail_pop_county_2000 <- max_jail_pop_county_2000
-summary_info$max_jail_pop_county_2018 <- max_jail_pop_county_2018
 
 Chart 1:
 
