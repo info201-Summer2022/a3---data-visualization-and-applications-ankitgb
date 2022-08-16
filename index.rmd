@@ -7,13 +7,14 @@ fontsize: 12pt
 --- 
 
 ```{r setup, include=FALSE}
-source("Analysis.R")
 
 library("knitr")
 library("usmap")
 library("ggplot2")
 library(dplyr)
 library(reshape2)
+
+source("Analysis.R")
 
 ``` 
 

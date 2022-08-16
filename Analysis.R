@@ -18,18 +18,6 @@ Baldwin_tot_pop_2018 <- filter(Alabama_Baldwin_Data, year == 2018)
 
 #Summary Information
 
-summary_info <- list()
-summary_info$max_population_year_Baldwin <- max_population_year_Baldwin
-summary_info$min_population_year_Baldwin <- min_population_year_Baldwin
-summary_info$mean_male <- mean_male
-summary_info$mean_female <- mean_female
-summary_info$max_population_county_2000 <- max_population_county_2000
-summary_info$max_population_county_2018 <- max_population_county_2018
-summary_info$max_jail_pop_county_2000 <- max_jail_pop_county_2000
-summary_info$max_jail_pop_county_2018 <- max_jail_pop_county_2018
-
-print(summary_info)
-
 #1) The maximum population of Baldwin County from 1970 to 2018 and the year that this maximum total population took place.
 
 Alabama_Baldwin_Data <- filter(Alabama_data, county_name == "Baldwin County")
