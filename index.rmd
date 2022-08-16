@@ -7,7 +7,6 @@ fontsize: 12pt
 --- 
 
 ```{r setup, include=FALSE}
-
 source("Analysis.R")
 
 library("knitr")

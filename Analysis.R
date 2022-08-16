@@ -3,7 +3,7 @@ library(reshape2)
 install.packages("ggplot2")
 
 #Loading the Data
-incarceration_data <- read.csv("D:/incarceration_trends.csv")
+incarceration_data <- read.csv("https://raw.githubusercontent.com/vera-institute/incarceration-trends/master/incarceration_trends.csv")
 Alabama_data <- filter(incarceration_data, state == "AL")
 Alabama_filter_data <- filter(Alabama_data, county_name == "Autauga County" |
                               county_name == "Baldwin County" |
